@@ -53,68 +53,38 @@ CMD ["npm", "run", "dev", "--host"]
 Step 2: **Place a Docker Compose file at the project root**
 
 **Docker Compose file**
-
-
 services:
-
   mongodb:
-  
     image: mongo:latest
-    
     container_name: mongodb
-    
     ports:
-    
       - 27017:27017
-      
     volumes:
-    
       - mongo_volume:/data/db
-      
   api:
-  
     image: api
-    
     container_name: api
-    
     depends_on:
-    
       - mongodb
-      
     build: 
-    
       context: server
-      
       dockerfile: ./Dockerfile
-      
     ports:
-    
       - 8000:8000
-      
+
   ui:
-  
     image: ui
-    
     container_name: ui
-    
     depends_on:
-    
       - api
-      
     build:
-    
       context: ui
-      
       dockerfile: ./Dockerfile
-      
     ports:
-    
-      - 3000:3000      
+      - 3000:3000
 
 volumes:
-
   mongo_volume:
-  
 
 Step 3:**Build & run**
 
