@@ -99,10 +99,14 @@ Step 4:**Verify service status & logs**
 a) for docker container
    docker ps -a
 
-b) 
+b)to open an interactive terminal(shell) inside a running Docker container.
+
   docker exec -it (container-id) bash
-c) ls
-d) exit
+  
+c) to view the files inside the container
+    ls
+d) to exit the container
+  exit
 e) Open in browser 
     Frontend: http://localhost:4000
 
