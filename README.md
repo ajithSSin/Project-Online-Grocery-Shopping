@@ -1,5 +1,6 @@
 # Project Name: Online-Grocery-Shopping
 **Project Description:**
+
 The Online Grocery Shopping System is a digital platform that allows customers to purchase groceries and household items conveniently through the internet. Instead of visiting physical stores, users can browse products, compare prices, add items to their virtual cart, and place orders online from the comfort of their homes.
 
 This system simplifies the grocery shopping experience by integrating product listings, cart management, secure online payments, and home delivery services in one platform. It provides a user-friendly interface for customers to search and purchase products and an efficient backend for administrators to manage inventory.
