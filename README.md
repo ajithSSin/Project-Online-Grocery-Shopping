@@ -4,7 +4,7 @@ The Online Grocery Shopping System is a digital platform that allows customers t
 
 This system simplifies the grocery shopping experience by integrating product listings, cart management, secure online payments, and home delivery services in one platform. It provides a user-friendly interface for customers to search and purchase products and an efficient backend for administrators to manage inventory, orders, and user information.
 
-Customers can register or log in, explore various product categories (such as fruits, vegetables, dairy, packaged goods, etc.), and complete their purchase using multiple payment options like credit/debit cards, UPI, or net banking. Once an order is confirmed, it is processed by the store’s backend team for packaging and delivery.
+Customers can register or log in, explore various product categories and complete their purchase using multiple payment options like credit/debit cards, UPI, or net banking. Once an order is confirmed, it is processed by the store’s backend team for packaging and delivery.
 
 The system is built using modern web technologies — typically with React.js on the frontend, Node.js and Express.js on the backend, and a MongoDB or MySQL database to store user and product data securely. Authentication is handled using JWT (JSON Web Tokens) to ensure safe access.
 
