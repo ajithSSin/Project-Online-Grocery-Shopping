@@ -55,9 +55,7 @@ Step 2: **Place a Docker Compose file at the project root**
 **Docker Compose file**
 
 services:
-
-  mongodb:
-  
+  mongodb:  
     image: mongo:latest
     
     container_name: mongodb
