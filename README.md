@@ -96,12 +96,14 @@ docker compose up --build
 
 Step 4:**Verify service status & logs**
 
-docker ps
-docker ps -a
-
-Open in browser 
-
-Frontend: http://localhost:4000
+a) for docker container
+   docker ps -a
+b) 
+  docker exec -it (container-id) bash
+c) ls
+d) exit
+e) Open in browser 
+    Frontend: http://localhost:4000
 
 Step 5:**Stop**
 
