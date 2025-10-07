@@ -14,6 +14,7 @@ Overall, the Online Grocery Shopping System provides a convenient, time-saving, 
 **Step-by-step: Build & run with Docker Compose**
 
 Step 1: Specify requirements in the Docker file for the Backend and Frontend
+
 Backend (server/Dockerfile) — (Node):
 
 **Docker file for Backend**
