@@ -117,7 +117,7 @@ volumes:
 
 Step 3:**Build & run**
 
-# Build images and start 
+**Build images and start**
 
 docker compose up --build
 
