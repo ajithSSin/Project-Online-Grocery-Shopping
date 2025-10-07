@@ -15,7 +15,7 @@ Overall, the Online Grocery Shopping System provides a convenient, time-saving, 
 
 Step 1: Specify requirements in the Docker file for the Backend and Frontend
 
-Backend (server/Dockerfile) — (Node):
+**Backend (server/Dockerfile) — (Node):**
 
 **Docker file for Backend**
 
@@ -32,7 +32,7 @@ COPY . .
 CMD ["node","index.js"]
 
 
-Frontend (client/Dockerfile)-(React)
+**Frontend (client/Dockerfile)-(React):**
 
 **Docker file for Frontend**
 
