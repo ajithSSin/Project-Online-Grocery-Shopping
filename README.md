@@ -96,7 +96,8 @@ docker compose up --build
 
 Step 4:**Verify service status & logs**
 
-docker compose ps
+docker ps
+docker ps -a
 
 Open in browser 
 
