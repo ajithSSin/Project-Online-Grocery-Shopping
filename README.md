@@ -18,20 +18,32 @@ Backend (server/Dockerfile) — (Node):
 
 **Docker file for Backend**
 FROM node:20.19.1
+
 WORKDIR /usr/src/app
+
 COPY package*.json ./
+
 RUN npm install
+
 COPY . .
+
 CMD ["node","index.js"]
+
 
 Frontend (client/Dockerfile)-(React)
 **Docker file for Frontend**
 FROM node:20.19.1
+
 WORKDIR /app
+
 COPY package.json .
+
 COPY package-lock.json .
+
 RUN npm install
+
 COPY . .
+
 CMD ["npm", "run", "dev", "--host"]
 
 Step 2: Place a Docker Compose file at the project root
