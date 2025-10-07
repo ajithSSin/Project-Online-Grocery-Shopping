@@ -98,6 +98,7 @@ Step 4:**Verify service status & logs**
 
 a) for docker container
    docker ps -a
+   
 b) 
   docker exec -it (container-id) bash
 c) ls
