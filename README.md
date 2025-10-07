@@ -129,9 +129,7 @@ docker compose ps
 
 Frontend: http://localhost:4000
 
-Step 5:
-
-Step 6:**Stop**
+Step 5:**Stop**
 
 docker compose down
 
