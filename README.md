@@ -125,7 +125,7 @@ Step 4:**Verify service status & logs**
 
 docker compose ps
 
-**Open in browser:**
+Open in browser 
 
 Frontend: http://localhost:4000
 
