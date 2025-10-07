@@ -53,39 +53,39 @@ CMD ["npm", "run", "dev", "--host"]
 Step 2: **Place a Docker Compose file at the project root**
 
 **Docker Compose file**
-
-services:
+services: 
   mongodb:
     image: mongo:latest
     container_name: mongodb
     ports:
       - 27017:27017
     volumes:
-      - mongo_volume:/data/db
+      -mongo_volume:/data/db
+
   api:
     image: api
     container_name: api
     depends_on:
       - mongodb
-    build: 
+    build:
       context: server
       dockerfile: ./Dockerfile
-    ports:
-      - 8000:8000
-
+      ports:
+        -8000:8000
+  
   ui:
     image: ui
     container_name: ui
     depends_on:
       - api
     build:
-      context: ui
+      context:ui
       dockerfile: ./Dockerfile
     ports:
       - 3000:3000
 
-volumes:
-  mongo_volume:
+  volumes:
+    mongo_volume:
   
 
 Step 3:**Build & run**
@@ -98,7 +98,7 @@ Step 4:**Verify service status & logs**
 
 a) for docker container
    docker ps -a
-   
+
 b) 
   docker exec -it (container-id) bash
 c) ls
