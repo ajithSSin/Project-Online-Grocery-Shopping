@@ -10,3 +10,63 @@ Customers can register or log in, explore various product categories and complet
 The system is built using modern web technologies — typically with React.js on the frontend, Node.js and Express.js on the backend, and a MongoDB database to store user and product data securely. Authentication is handled using JWT (JSON Web Tokens) to ensure safe access.
 
 Overall, the Online Grocery Shopping System provides a convenient, time-saving, and efficient way for customers to shop for everyday essentials while helping grocery stores expand their reach through digital transformation.
+
+**Step-by-step: Build & run with Docker Compose**
+
+Step 1: Specify requirements in the Docker file for the Backend and Frontend
+Backend (server/Dockerfile) — (Node):
+
+**Docker file for Backend**
+FROM node:20.19.1
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+CMD ["node","index.js"]
+
+Frontend (client/Dockerfile)-(React)
+**Docker file for Frontend**
+FROM node:20.19.1
+WORKDIR /app
+COPY package.json .
+COPY package-lock.json .
+RUN npm install
+COPY . .
+CMD ["npm", "run", "dev", "--host"]
+
+Step 2: Place a Docker Compose file at the project root
+**Docker Compose file**
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_volume:/data/db
+  api:
+    image: api
+    container_name: api
+    depends_on:
+      - mongodb
+    build: 
+      context: server
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+
+  ui:
+    image: ui
+    container_name: ui
+    depends_on:
+      - api
+    build:
+      context: ui
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+
+volumes:
+  mongo_volume:
+
+Step 3:
