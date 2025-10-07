@@ -17,6 +17,7 @@ Step 1: Specify requirements in the Docker file for the Backend and Frontend
 Backend (server/Dockerfile) — (Node):
 
 **Docker file for Backend**
+
 FROM node:20.19.1
 
 WORKDIR /usr/src/app
@@ -31,7 +32,9 @@ CMD ["node","index.js"]
 
 
 Frontend (client/Dockerfile)-(React)
+
 **Docker file for Frontend**
+
 FROM node:20.19.1
 
 WORKDIR /app
