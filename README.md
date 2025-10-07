@@ -13,7 +13,7 @@ Overall, the Online Grocery Shopping System provides a convenient, time-saving, 
 
 **Step-by-step: Build & run with Docker Compose**
 
-Step 1: Specify requirements in the Docker file for the Backend and Frontend
+Step 1: **Specify requirements in the Docker file for the Backend and Frontend**
 
 **Backend (server/Dockerfile) — (Node):**
 
@@ -50,7 +50,7 @@ COPY . .
 
 CMD ["npm", "run", "dev", "--host"]
 
-Step 2: Place a Docker Compose file at the project root
+Step 2: **Place a Docker Compose file at the project root**
 
 **Docker Compose file**
 
@@ -88,7 +88,7 @@ services:
       
     ports:
     
-      - 8000:8000
+      - 6000:6000
 
   ui:
   
@@ -108,11 +108,33 @@ services:
       
     ports:
     
-      - 3000:3000
+      - 4000:4000
       
 volumes:
 
   mongo_volume:
   
 
-Step 3:
+Step 3:**Build & run**
+
+# Build images and start 
+
+docker compose up --build
+
+Step 4:**Verify service status & logs**
+
+docker compose ps
+
+**Open in browser:**
+
+Frontend: http://localhost:4000
+
+Step 5:
+
+Step 6:**Stop**
+
+docker compose down
+
+
+
+
