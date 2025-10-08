@@ -121,7 +121,9 @@ Overall full-stack app (Node + MongoDB + React)
 **How to run a Docker image**
 
 Step 1: **Make sure Docker is installed**
+
         a)Go to the Docker website:
+        
           👉 https://www.docker.com/products/docker-desktop
 
         b) Download Docker Desktop for your system (Windows or Linux/Ubuntu).
@@ -133,8 +135,11 @@ Step 1: **Make sure Docker is installed**
             Wait until it says “Docker is running.”
             
 Step 2: **Open a Terminal / Command Prompt**
+
         Windows: open Command Prompt (search “cmd”)
+        
         Mac: open Terminal (search “Terminal”)
+        
         Linux: open Terminal
         
 Step 3: **Build & run**
