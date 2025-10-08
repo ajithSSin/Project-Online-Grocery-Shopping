@@ -126,13 +126,10 @@ Step 1: **Make sure Docker is installed**
         
           👉 https://www.docker.com/products/docker-desktop
 
-        b) Download Docker Desktop for your system (Windows or Linux/Ubuntu).
-            For Linux users: ask your IT team to install Docker with
-            sudo apt install docker.io and ensure it’s running.
-
-        c) Install it by following the on-screen steps.
-            After installation, open Docker Desktop — you should see a little whale 🐳 icon in the taskbar.
-            Wait until it says “Docker is running.”
+        b) Download Docker Desktop for your system (Windows or Mac).
+            For Linux users: install Docker with 
+            sudo apt install docker.io 
+            and ensure it’s running.        
             
 Step 2: **Open a Terminal / Command Prompt**
 
