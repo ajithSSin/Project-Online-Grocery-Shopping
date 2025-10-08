@@ -11,6 +11,17 @@ The system is built using modern web technologies — typically with React.js on
 
 Overall, the Online Grocery Shopping System provides a convenient, time-saving, and efficient way for customers to shop for everyday essentials while helping grocery stores expand their reach through digital transformation.
 
+**Requirements**
+
+A Node.js API
+
+A MongoDB database
+
+A React frontend
+
+A full-stack app (Node + MongoDB + React)
+
+
 **Step-by-step: Build & run with Docker Compose**
 **Docker Compose file**
 
