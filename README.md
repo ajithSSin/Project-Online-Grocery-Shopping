@@ -13,13 +13,13 @@ Overall, the Online Grocery Shopping System provides a convenient, time-saving, 
 
 **Requirements**
 
-A Node.js API
+  Node.js API
 
-A MongoDB database
+  MongoDB database
 
-A React frontend
+  React frontend
 
-A full-stack app (Node + MongoDB + React)
+Overall full-stack app (Node + MongoDB + React)
 
 
 **Step-by-step: Build & run with Docker Compose**
@@ -31,91 +31,91 @@ A full-stack app (Node + MongoDB + React)
 
 **Docker file for Backend**
 
-FROM node:20.19.1
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-CMD ["node","index.js"]
+      FROM node:20.19.1
+      
+      WORKDIR /usr/src/app
+      
+      COPY package*.json ./
+      
+      RUN npm install
+      
+      COPY . .
+      
+      CMD ["node","index.js"]
 
 
 **Frontend (client/Dockerfile)-(React):**
 
 **Docker file for Frontend**
 
-FROM node:20.19.1
-
-WORKDIR /app
-
-COPY package.json .
-
-COPY package-lock.json .
-
-RUN npm install
-
-COPY . .
-
-CMD ["npm", "run", "dev", "--host"]
+      FROM node:20.19.1
+      
+      WORKDIR /app
+      
+      COPY package.json .
+      
+      COPY package-lock.json .
+      
+      RUN npm install
+      
+      COPY . .
+      
+      CMD ["npm", "run", "dev", "--host"]
 
 **Place a Docker Compose file at the project root**
 
 **Docker Compose file**
 
-services: 
-
-  mongodb:
-  
-    image: mongo:latest
-    
-    container_name: mongodb
-    
-    ports:
-      - 27017:27017
+      services: 
       
-    volumes:
-      -mongo_volume:/data/db
-
-  api:
-  
-    image: api
-    
-    container_name: api
-    
-    depends_on:
-      - mongodb
+        mongodb:
+        
+          image: mongo:latest
+          
+          container_name: mongodb
+          
+          ports:
+            - 27017:27017
+            
+          volumes:
+            -mongo_volume:/data/db
       
-    build:
-      context: server
+        api:
+        
+          image: api
+          
+          container_name: api
+          
+          depends_on:
+            - mongodb
+            
+          build:
+            context: server
+            
+            dockerfile: ./Dockerfile
+            
+            ports:
+              -8000:8000
+        
+        ui:
+        
+          image: ui
+          
+          container_name: ui
+          
+          depends_on:
+            - api
+            
+          build:
+            context:ui
+            
+            dockerfile: ./Dockerfile
+            
+          ports:
+            - 3000:3000
       
-      dockerfile: ./Dockerfile
-      
-      ports:
-        -8000:8000
-  
-  ui:
-  
-    image: ui
-    
-    container_name: ui
-    
-    depends_on:
-      - api
-      
-    build:
-      context:ui
-      
-      dockerfile: ./Dockerfile
-      
-    ports:
-      - 3000:3000
-
-  volumes:
-    mongo_volume:
+        volumes:
+          mongo_volume:
   
 
 Step 1:**Build & run**
