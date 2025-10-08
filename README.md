@@ -24,7 +24,7 @@ Overall full-stack app (Node + MongoDB + React)
   
   ***Docker Compose file***
     
-  ***Specify requirements in the Docker file for the Backend and Frontend***
+  *Specify requirements in the Docker file for the Backend and Frontend***
     
   **Backend (server/Dockerfile) — (Node):** **Docker file for Backend**
 
