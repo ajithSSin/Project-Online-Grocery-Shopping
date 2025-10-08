@@ -120,35 +120,35 @@ Overall full-stack app (Node + MongoDB + React)
 
 Step 1:**Build & run**
 
-*Build images and start*
-
-docker compose up --build    
+        *Build images and start*
+        
+        docker compose up --build    
 
 Step 2:**Verify service status & logs**
 
-a) check for docker container
-
-   docker ps -a
-
-b)to open an interactive terminal(shell) inside a running Docker container.
-
-  docker exec -it (container-id) bash
-  
-c) to view the files inside the container
-
-    ls
-    
-d) to exit the container
-
-  exit
-  
-e) Open in browser 
-
-    Frontend: http://localhost:4000
+        a) check for docker container
+        
+           docker ps -a
+        
+        b)to open an interactive terminal(shell) inside a running Docker container.
+        
+          docker exec -it (container-id) bash
+          
+        c) to view the files inside the container
+        
+            ls
+            
+        d) to exit the container
+        
+          exit
+          
+        e) Open in browser 
+        
+            Frontend: http://localhost:4000
 
 Step 3:**Stop**
 
-docker compose down
+        docker compose down
 
 
 
