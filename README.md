@@ -118,13 +118,32 @@ Overall full-stack app (Node + MongoDB + React)
           mongo_volume:
   
 
-Step 1:**Build & run**
+**How to run a Docker image**
+
+Step 1: **Make sure Docker is installed**
+        a)Go to the Docker website:
+          👉 https://www.docker.com/products/docker-desktop
+
+        b) Download Docker Desktop for your system (Windows or Linux/Ubuntu).
+            For Linux users: ask your IT team to install Docker with
+            sudo apt install docker.io and ensure it’s running.
+
+        c) Install it by following the on-screen steps.
+            After installation, open Docker Desktop — you should see a little whale 🐳 icon in the taskbar.
+            Wait until it says “Docker is running.”
+            
+Step 2: **Open a Terminal / Command Prompt**
+        Windows: open Command Prompt (search “cmd”)
+        Mac: open Terminal (search “Terminal”)
+        Linux: open Terminal
+        
+Step 3: **Build & run**
 
         *Build images and start*
         
         docker compose up --build    
 
-Step 2:**Verify service status & logs**
+Step 4: **Verify service status & logs**
 
         a) check for docker container
         
@@ -146,7 +165,7 @@ Step 2:**Verify service status & logs**
         
             Frontend: http://localhost:4000
 
-Step 3:**Stop**
+Step 5:**Stop**
 
         docker compose down
 
