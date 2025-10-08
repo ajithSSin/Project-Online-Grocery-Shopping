@@ -23,13 +23,13 @@ Overall full-stack app (Node + MongoDB + React)
 
 
 **Step-by-step: Build & run with Docker Compose**
-**Docker Compose file**
-
-**Specify requirements in the Docker file for the Backend and Frontend**
-
-**Backend (server/Dockerfile) — (Node):**
-
-**Docker file for Backend**
+    **Docker Compose file**
+    
+    **Specify requirements in the Docker file for the Backend and Frontend**
+    
+    **Backend (server/Dockerfile) — (Node):**
+    
+    **Docker file for Backend**
 
       FROM node:20.19.1
       
